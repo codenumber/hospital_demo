@@ -1,0 +1,30 @@
+<view class="ask_pg">
+  <view class="doctor_box">
+    <DoctorInter doctor="{{doctor}}">
+    <block><view class="my_intergral">你的剩余积分：{{userInfo.integral}}积分</view> </block>
+    </DoctorInter>
+  </view>
+
+  <view class="message_box">
+    <view class="message_title">
+      请尽量清晰地描述您的问题：
+    </view>
+    <textarea value="{{messageVaule}}" class="message_content" bindinput="setMessageValue"> </textarea>
+  </view>
+  
+  <view class="img_upload">
+    <view class="upload_title">
+      请上传您的佐证图片（最多5张）：
+    </view>
+    <view class="bottom_box">
+      <view class="img_box" wx:for="{{imgTempList}}" wx:key="index" >
+        <UpImg src="{{item}}" index="{{index}}" bindCloseImg="handleImgClose"></UpImg>
+      </view>
+      <view bindtap="uploadImg" class="upload_btn iconfont icon-add"></view>
+    </view>
+  </view>
+
+      
+  <button type="success" disabled="{{!messageVaule.length}}"   class="upload_btn" bindtap="submitMessage">立即提问</button>
+
+</view>

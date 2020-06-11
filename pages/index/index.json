@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "DoctorInter": "../../components/DoctorInter/DoctorInter",
+    "Auth": "../../components/Auth/Auth",
+    "MessageItem": "../../components/MessageItem/MessageItem"
+  },
+  "navigationBarTitleText": "医生项目-孕妇端"
+}

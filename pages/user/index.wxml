@@ -1,0 +1,99 @@
+<view class="user_pg">
+  <view class="user_header">
+    <!-- 未登录状态 -->
+      <view class="user_box" wx:if="{{!userInfo.nickName}}">
+        <view class="img_box">
+          <image class="img" mode="widthFix" src="{{userInfo.avatarUrl ? userInfo.avatarUrl : '../../icons/userheader.png'}}"></image>
+        </view>
+        <view class="login_box">
+          <button class="btn" open-type="getUserInfo" bindgetuserinfo="handleuserinfo">点击登录账号</button>
+          <navigator class="nav">
+            <view class="iconfont icon-RectangleCopy"></view>
+            <view class="nav_text">切换到医生端</view>
+          </navigator>
+        </view>
+      </view>
+
+      <!-- 登录后的用户信息 -->
+      <view wx:if="{{userInfo.nickName}}" class="haveuserinfo_box">
+        <view class="user_img_box">
+          <image class="user_img" mode="widthFix" src="{{userInfo.avatarUrl}}"></image>
+        </view>
+       <view class="user_right_box">
+          <view class="user_info">
+            <view class="user_text">
+              <view class="user_name">{{userInfo.nickName}}</view>
+                <navigator class="nav" url="../doctorLogin/index">
+                  <view class="iconfont icon-RectangleCopy"></view>
+                   <view class="nav_text">切换到医生端</view>
+                 </navigator>
+               </view>
+              <view class="cal_box">
+                <view class="iconfont icon-calendar" bindtap="clickToSign"></view>
+                <view class="click_text">点击签到</view>
+              </view>
+            </view>
+              <view class="bottom_box">
+            <view class="integral_box">
+              <view class="integral_text">
+                <image class="integral_img" mode="widthFix" src="../../icons/integral.png"></image>
+                <view>{{userInfo.integral}}分</view>
+              </view>
+              <view class="integral_nav">
+                <navigator url="../integral/index">
+                  查看积分明细 ->
+                </navigator>
+              </view>
+            </view>
+            <view class="kids_box">
+               <view class="kids_text">
+                <image class="kids_img" mode="widthFix" src="../../icons/kidheader.png"></image>
+                <view>{{kidsList.length}}名</view>
+              </view>
+              <view class="kids_nav">
+                <navigator url="../kids/index">
+                  查看孩子详情 ->
+                </navigator>
+              </view>
+            </view>
+          </view>  
+          </view>
+          
+      </view>
+    
+  </view>
+
+  <view class="container">
+    <!-- 有提问记录盒子  -->
+    <view class="record_box" wx:if="{{questionList.length}}">
+      <view class="record_title">问诊记录</view>
+      <view class="record_item" wx:for="{{questionList}}" wx:key="index">
+        <view class="record_top">
+          <view class="top_left">
+            <image class="doctor_header" mode="widthFix" src="../../icons/doctorsimple.png"></image>
+            <view class="doctor_name">{{item.doctor.name}} {{item.doctor.department}}</view>
+          </view>
+          <view class="top_right">
+            <image class="email" mode="widthFix" src="../../icons/newmessage.png"></image>
+          </view>
+        </view>
+        <view class="record_content">
+          {{item.question_content.message}}<text class="text_num">(限制60字)</text>
+        </view>
+        <view class="record_bottom">
+          <view class="record_time">提问时间：{{item.create_time}}</view>
+        </view>
+      </view>
+    </view>
+    <!-- 无提问记录盒子 -->
+    <view class="no_record" wx:if="{{ userInfo.nickName && !questionList.length }}">
+      <view class="no_record_text">
+        <view> 您还没有提问记录</view> 
+        <view>前往问诊向医生提问~</view> 
+      </view>
+    </view>
+
+  </view>
+
+
+</view>

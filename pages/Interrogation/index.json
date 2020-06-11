@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "DoctorInter": "../../components/DoctorInter/DoctorInter"
+  }
+  
+}

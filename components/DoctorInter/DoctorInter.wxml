@@ -1,0 +1,35 @@
+<view class="doctor_inter">
+  <view class="doctor_item">
+    <view class="doctor_introduce_box">
+      <view class="img_box">
+      <image class="img" mode="widthFix" src="../../icons/doctorheader.png"></image>
+      </view>
+      <view class="doctor_desc">
+        <view class="doctor_name_type"> 
+          <text class="doctor_name_text">{{doctor.name}}</text>
+          <text class="position">{{doctor.position}}</text>
+        </view>
+        <view class="doctor_hospital">
+          <text>{{doctor.department}}:</text>
+          <text class="hosipital_text">{{doctor.hosipital}}</text>
+        </view>
+        <view class="doctor_speciality">擅长：{{doctor.speciality}}</view>
+      </view>
+      <view>
+      
+      </view>
+      
+    </view>
+    <view class="doctor_item_bottom">
+      <view class="nbsp_flex"></view>
+      <view class="charge_box">
+        <view class="charge_detail charge_parent"><text>图文问诊：{{doctor.integral}}积分/次</text><slot></slot></view>
+        <view class="ask_nav">
+            <view data-doctorid="{{doctor.id}}" bindtap="toAsk" class="nav_text">问医生</view>
+        </view>
+      </view>
+      
+    </view>
+  </view>
+
+</view>

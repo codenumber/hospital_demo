@@ -1,0 +1,71 @@
+/* pages/ask/index.wxss */
+page {
+  background-color: #feebed;
+}
+.doctor_box .doctor_item {
+  margin-top: 0;
+}
+.ask_nav {
+  display: none;
+}
+.doctor_box {
+  padding: 0rpx 30rpx 30rpx 15rpx;
+  background-color: #fff;
+}
+/* 当权重相同，组件优先 */
+
+/* 对组件样式修改避免有按钮显示，造成不好体验 */
+.doctor_item_bottom .charge_box .charge_parent {
+  padding-left: 15rpx;
+  font-size: 20rpx;
+  flex-direction: column;
+  color: #d64f6f;
+  align-items: flex-start;
+} 
+.doctor_item_bottom .charge_box .charge_parent view {
+  margin-top: 10rpx;
+}
+.message_box {
+  margin-top: 30rpx;
+  background-color: #fff;
+  padding: 20rpx 20rpx;
+} 
+.message_box .message_content {
+  height: 400rpx;
+  width: 100%;
+  border-radius: 15rpx;
+  padding: 40rpx 20rpx;
+  border: 2rpx solid #ccc;
+  margin-top: 20rpx;
+}
+.img_upload {
+  margin-top: 30rpx;
+  background-color: #fff;
+  padding: 10rpx 20rpx 40rpx 20rpx;
+}
+.bottom_box {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30rpx 0 0 0;
+}
+.bottom_box .upload_btn {
+  width: 100rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rpx;
+}
+.bottom_box .iconfont {
+  font-size: 100rpx;
+}
+button {
+  margin-top: 15rpx;
+  border: 0 !important;
+  color: #d64f6f!important;
+  background-color: rgba(0,0,0,0);
+  font-size: 40rpx;
+} 
+button::after {
+  border: 0!important;
+}

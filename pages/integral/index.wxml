@@ -1,0 +1,23 @@
+<view class="integral_pg">
+  <view class="date_item" wx:for="{{dateList}}">
+    <view class="date_title">{{item.create_time}}</view>
+    <view class="integral_box">
+      <view wx:if="{{item.signIntegral !== 0}}" class="integral_item">
+        <view class="integral_text">签到</view>
+        <view class="integral_num">+{{item.signIntegral}}分</view>
+      </view>
+       <view wx:if="{{item.messageIntegral !== 0}}" class="integral_item">
+        <view class="integral_text">看文章</view>
+        <view class="integral_num">+{{item.messageIntegral}}分</view>
+      </view>
+       <view wx:if="{{item.videoIntegral !== 0}}" class="integral_item">
+        <view class="integral_text">看视频</view>
+        <view class="integral_num">+{{item.videoIntegral}}分</view>
+      </view>
+       <view wx:if="{{item.askIntegral !== 0}}" class="integral_item">
+        <view class="integral_text">提问</view>
+        <view class="integral_num ask">-{{item.askIntegral}}分</view>
+      </view>
+    </view>
+  </view>
+</view>

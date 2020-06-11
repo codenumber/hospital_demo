@@ -1,0 +1,11 @@
+<view class="interrogation">
+  <view class="input_box">
+    <input class="input_sty" value="{{inputValue}}" placeholder="请输入医生，医院名字" bindinput="getInputValue"></input>
+    <button bindtap="clearInputValue" wx:if="{{inputValue.length}}" class= "input_btn">取消</button>
+  </view>
+  <view class="inter_container">
+    <view wx:for="{{doctorsList}}" wx:key="id">
+      <DoctorInter doctor="{{item}}"> </DoctorInter>
+    </view>
+  </view>
+</view>

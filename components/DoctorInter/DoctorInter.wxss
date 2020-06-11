@@ -1,0 +1,87 @@
+.doctor_item {
+  background-color: #fff;
+  display: flex;
+  height: 230rpx;
+  flex-direction: column;
+  margin-top: 15rpx;
+}
+.doctor_introduce_box {
+  flex: 4;
+  display: flex;
+  padding: 20rpx 20rpx 0 20rpx;
+}
+.doctor_desc {
+  display: flex;
+  flex-direction: column;
+  flex: 8;
+  padding-left: 15rpx;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.doctor_desc .doctor_name_type {
+  display: flex;
+  align-items: center;
+}
+.doctor_desc .doctor_name_type .doctor_name_text {
+  font-size: 40 rpx;
+  font-weight: bolder;
+}
+.doctor_name_type .position  {
+  height: 80%;
+  font-size: 20rpx;
+  padding: 5rpx 10rpx;
+  color: #fff;
+  background-color: #070293;
+  margin-left: 15rpx;
+}
+.doctor_hospital, .doctor_speciality {
+  color: #000;
+  font-size:25rpx;
+  white-space: nowarp;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  width: 80%;
+}
+.doctor_hospital .hosipital_text {
+  margin-left: 15rpx;
+}
+.doctor_item_bottom {
+  flex: 1;
+  display: flex;
+  padding: 20rpx 20rpx;
+}
+.img_box,.nbsp_flex {
+  flex: 2;
+  justify-content: center;
+  align-items: center;
+}
+
+.img_box .img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.charge_box  {
+  padding: 0;
+  flex: 8;
+  display: flex;
+  justify-content: space-between;
+}
+.charge_box .charge_detail {
+  color: grey;
+  font-size: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.charge_box .ask_nav .nav_text{
+  padding: 8rpx 30rpx;
+  border: 3rpx solid #3f3aa8;
+  color: #3f3aa8;
+  font-size: 20rpx; 
+  background-color: #fff;
+  font-weight: bolder;
+  border-radius: 10rpx;
+}

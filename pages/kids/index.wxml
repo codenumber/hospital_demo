@@ -1,0 +1,56 @@
+<scroll-view scroll-y="{{!showDialog}}" class="kids_pg {{showDialog? 'overflow' : ''}}">
+  <view class="kid_item" wx:for="{{kidsList}}" wx:key="index">
+    <view class="item_box" data-index="{{index}}" style="left:{{item.left}}rpx;" bind:touchstart="touchStart" bind:touchmove="moveDistance">
+      <view class="img_box">
+        <image class="img" mode="widthFix" src="{{ item.gender === 0 ? '../../icons/boy.png' : '../../icons/gril.png'}}"></image>
+      </view>
+      <view class="desc_edit_box">
+        <view class="desc_box">
+          <view class="desc_name">昵称：{{item.name}}</view>
+          <view class="desc_gender">性别：{{item.gender === 0? '男' : '女'}}</view>
+          <view class="desc_birthday">出生日期：{{item.birthday}}</view>
+          <view wx:if="{{item.day > 0 }}" class="day">年龄：{{item.day}}天</view> 
+        </view>
+        <view class="edit_iconfont_box">
+            <view class="iconfont icon-editor" data-index="{{index}}" bindtap="editKidInfo"></view>
+        </view>
+      </view>
+      <view class="del_box" bindtap="delKides">删除</view>
+    </view>
+
+
+  </view>
+</scroll-view>
+
+
+<view class="edit_dialog" wx:if="{{showDialog}}" catchtouchmove="stop">
+  <view animation="{{animationData}}" class="edit_box">
+    <view class="closeDialog" bindtap="closeDialog">×</view>
+    <view class="edit_title">
+      <view class="title_text">请填写如下信息:</view>
+    </view>
+    <view class="edit_item">
+      <view class="name">昵称：</view>
+      <input class="name_input" value="{{name}}"  bindinput="setKidsName"></input>
+    </view>
+     <view class="edit_item">
+      <view class="gender">性别：</view>
+      <radio-group class="gender_choose" name="{{gender}}" bindchange="setKidsGender">
+        <radio class="female" value="0" color="rgba(0,0,0,0)" checked="{{gender === '0' }}"></radio>
+        <radio class="male" value="1" color="rgba(0,0,0,0)" checked="{{gender === '1'}}"></radio>
+      </radio-group>
+    </view>
+    <view class="edit_item">
+      <view class="birthday">出生日期：</view>
+      <view>{{birthday}}</view>
+      <picker mode="date" value="{{birthday}}" bindchange="bindDateChange">
+        <view class="iconfont icon-editor"></view>
+      </picker>
+    </view>
+    <button  wx:if="{{isEdit}}" class="add_btn" bindtap="submitEditKidData">确认修改</button>
+    <button wx:else class="add_btn" bindtap="addKidData">确认新增</button>
+  </view>
+</view>
+
+
+<view class="bottom_tool" bindtap="showAddKidsDialog">新增孩子</view>

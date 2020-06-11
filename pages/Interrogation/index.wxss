@@ -1,0 +1,32 @@
+page {
+  background-color: #feebed;
+}
+.input_box {
+  height: 80rpx;
+  width: 100%;
+  padding: 10rpx 20rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+.input_box .input_sty {
+  flex: 8;
+  padding-left: 15rpx;
+  border: 2rpx solid  #ccc;
+  border-radius: 15rpx;
+  height: 100%;
+}
+.input_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  margin-left: 15rpx;
+  height:100%;
+}
+.inter_container {
+  padding: 0 25rpx;
+}
+.doctor_item {
+  border-radius: 20rpx;
+}

@@ -1,0 +1,28 @@
+<view class="message_item" wx:for="{{messageList}}" wx:key="id" data-typeid="{{item.typeId}}" data-index="{{item.id}}" bindtap="navigatorToPage">
+        <!-- 图片盒子 -->
+        <view class="img_box">
+          <view class="img_over">
+            <image class="img" mode="widthFix" src="{{item.pic_url}}"></image>
+            <view wx:if="{{item.typeId === 1}}" class="iconfont icon-icon_live_fill"></view>
+          </view>
+        </view>
+        <!-- 文章描述盒子 -->
+        <view class="desc_box">
+          <view class="desc_text">
+            <view class="desc_title">{{item.title}}</view>
+            <view class="message_type">{{item.message_type}}</view>
+          </view>
+          <view class="desc_bottom">
+            <view class="bottom_box">
+              <view class="comment_num">
+                <view class="iconfont icon-xiaoxi"></view>
+                <view class="comment_text">{{item.comment_num}}</view>
+              </view>
+              <view class="create_time">
+                <view class="iconfont icon-jilu"></view>
+                <view class="time_text">{{item.create_time}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>

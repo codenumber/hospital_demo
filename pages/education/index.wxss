@@ -1,0 +1,63 @@
+page {
+  background-color:#feebed;
+  padding-bottom: 50rpx;
+}
+.nav_top {
+  padding-top: 15rpx;
+  height: 80rpx;
+  display: flex;
+  background-color: #fff;
+}
+.nav_top .nav_item {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25rpx;
+}
+.nav_top .nav_drop {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  color: #d64f6f;
+  position: relative;
+}
+.nav_drop .drop_text {
+  display: flex;
+  justify-content: center;
+  font-size: 30rpx;
+}
+.nav_top .nav_drop  .iconfont {
+  font-size: 30rpx;
+  color: #d64f6f;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.active {
+  border-bottom: 2rpx solid #d64f6f;
+}
+.drop_menu {
+  top: 65rpx;
+  right: 0;
+  position: absolute;
+  background-color: #fff;
+  flex-direction: column;
+  display: flex;  
+}
+.drop_menu .drop_item {
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100rpx;
+}
+.drop_text {
+  font-size: 30rpx;
+}
+.message_container {
+  padding: 0 20rpx 0 30rpx;
+}
+.message_item {
+  margin-top: 15rpx;
+}

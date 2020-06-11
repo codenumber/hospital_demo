@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "DoctorInter": "../../components/DoctorInter/DoctorInter",
+    "UpImg": "../../components/UpImg/UpImg"
+  },
+  "navigationBarTitleText": "医生项目-孕妇端"
+}

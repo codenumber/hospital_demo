@@ -1,0 +1,24 @@
+<view class="edu_pg">
+<!-- 导航栏 -->
+  <view class="nav_top">
+    <view data-cateid="{{item.cateId}}" bindtap="showActive" class=" nav_item {{item.isActive? 'active' : ''}}" wx:for="{{navList}}" wx:key="typeId">
+      <view class="nav_text">{{item.navText}}</view>
+    </view>
+    <view class="nav_drop">
+      <view class="drop_text" bindtap="showDropMenu">筛选</view>
+      <view class="iconfont icon-icon-test"></view>
+      <view class="drop_menu" wx:if="{{showDrop}}">
+        <view class="drop_item" bindtap="chooseShowMessageType" data-index="{{item.id}}" wx:for="{{typeList}}" wx:key="id">
+          <view class="drop_item_text">{{item.text}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 文章显示 -->
+  <view class="message_container">
+    <MessageItem messageList="{{messageList}}"></MessageItem>
+  </view>
+  
+  
+
+</view>

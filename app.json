@@ -1,0 +1,67 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/Interrogation/index",
+    "pages/education/index",
+    "pages/pregnancy/index",
+    "pages/user/index",
+    "pages/ask/index",
+    "pages/Pre_screening/index",
+    "pages/integral/index",
+    "pages/children/index",
+    "pages/QA_detail/index",
+    "pages/message/index",
+    "pages/video/index",
+    "pages/kids/index",
+    "pages/doctorLogin/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#ffffff"
+  },
+  "tabBar": {
+    "selectedColor": "#000000",
+    "color": "#898989",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "./icons/index.png",
+      "selectedIconPath": "./icons/index.png"
+    },
+    {
+      "pagePath": "pages/Interrogation/index",
+      "text": "问诊",
+      "iconPath": "./icons/Interrogation.png",
+      "selectedIconPath": "./icons/Interrogation.png"
+    },
+    {
+      "pagePath": "pages/education/index",
+      "text": "教育",
+      "iconPath": "./icons/education.png",
+      "selectedIconPath": "./icons/education.png"
+    },
+    {
+      "pagePath": "pages/pregnancy/index",
+      "text": "孕期",
+      "iconPath": "./icons/pregnancy.png",
+      "selectedIconPath": "./icons/pregnancy.png"
+    },
+    {
+      "pagePath": "pages/user/index",
+      "text": "我的",
+      "iconPath": "./icons/user.png",
+      "selectedIconPath": "./icons/user.png"
+    }
+  ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "Auth": "../../components/Auth/Auth"
+  },
+  "plugins": {
+  }
+}

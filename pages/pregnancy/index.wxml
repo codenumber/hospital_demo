@@ -1,0 +1,68 @@
+<view class="pregnancy_pg">
+  <view class="pre_header">
+    <!-- 未设置预产期的盒子 -->
+    <view class="cal_box" wx:if="{{!date.length}}">
+      <view class="pre_cal">
+        <picker class="picker_container" mode="date" value="{{date}}" start="2019-01-01" end="2050-02-01" bindchange="bindDateChange">
+          <view class="picker iconfont icon-calendar">
+          </view>
+        </picker>
+      </view>
+      <view class="cal_text">请设定您的预期，以便进行孕检提醒~</view>
+    </view>
+
+    <view wx:else class="day_box">
+      <view class="day_top">
+        <view class="text_left">距宝宝出生还有：</view>
+        <view class="day_text">
+          <view class="date_box">预产期：{{date}}</view>
+          <view class="user_pickerbox">
+            <picker mode="date" value="{{date}}" start="2019-01-01" end="2050-02-01" bindchange="bindDateChange" >
+              <view class="iconfont icon-editor"></view>
+            </picker>
+          </view>
+        </view>
+      </view>
+
+      <view  class="day_content">
+        <view class="surplus_day">
+          <view class="day">{{day}} 天</view>
+        </view>
+        <view class="right_tool">
+          <view class="short_message">
+          <view class="message_text">孕妇短信提醒</view> 
+            <switch class='switch'></switch>
+          
+          </view>
+          <view class="wechart_message">
+            <view class="message_text">孕妇微信提醒</view> 
+            <switch class="switch"></switch>
+          </view>
+        </view>
+        
+      </view>
+
+
+    </view>
+  </view>
+
+  <view class='pre_container' wx:if="{{date.length}}">
+    <view class="pre_item" wx:for="{{pregnancyList}}" wx:key="index" data-num="{{item.num}}" bindtap="navigatorTo">
+      <view class="pre_title">
+        第{{item.num}}次孕检【孕{{item.weekNumber}}周】
+      </view>
+      <view class="pre_content">
+        <view class="pre_time">
+          <view class="pre_time_text">孕检时间：{{item.preDate}}</view>
+          <picker catchtap="stop" mode="date" data-index="{{index}}" value="{{item.preDate}}" bindchange="bindDateItemChange">
+            <view class="iconfont icon-editor"></view>
+          </picker>
+        </view>
+        <view class="pre_project">
+          检查项目：{{item.project}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

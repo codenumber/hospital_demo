@@ -1,0 +1,49 @@
+  <scroll-view scroll-y class="container {{isShowAuth ? 'overflow' : ''}}">
+  <view class="swiper_header">
+    <swiper class="swiper" autoplay indicator-dots indicator-color="white" indicator-active-color="#d5496a" circular>
+    <swiper-item  wx:for="{{swiperList}}" wx:key="index" >
+      <navigator>
+        <image mode="widthFix" src="{{item}}"></image>
+      </navigator>
+    </swiper-item>
+    </swiper>
+  </view>
+  <view class="video_box">
+    <view class="video_header">
+      <view class="title_text">视频推荐</view>
+      <view class="read_more">
+      <navigator open-type="switchTab" url="../education/index">>>>了解更多</navigator></view>
+    </view>
+    </view>
+    <!-- 视频推荐 -->
+    <view class="video_container">
+      <MessageItem messageList="{{videoList}}"></MessageItem>
+    </view>
+
+  <view class="message_box">
+    <view class="message_header">
+      <view class="title_text">文章推荐</view>
+      <view class="read_more">
+      <navigator open-type="switchTab" url="../education/index">>>>了解更多</navigator></view>
+    </view>
+    <view class="message_container">
+        <MessageItem messageList="{{articleList}}"></MessageItem>
+    </view>
+  </view>
+
+  <view class="ask_box">
+    <view class="ask_header">
+      <view class="title_text">医生问诊</view>
+      <view class="read_more">
+      <navigator open-type="switchTab" url="../Interrogation/index">>>>了解更多</navigator></view>
+    </view>
+    <view class="ask_container">
+      <view wx:for="{{doctorsList}}" wx:key="id">
+        <DoctorInter bindchangAuthStatus="changAuthStatus" doctor="{{item}}"></DoctorInter>
+      </view>
+    </view>
+    </view>
+
+</scroll-view>
+
+<Auth isShow="{{isShowAuth}}" bindchangAuthStatus="changAuthStatus" ></Auth>

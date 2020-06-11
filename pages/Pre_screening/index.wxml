@@ -1,0 +1,17 @@
+<view class="pre_screening_pg">
+  <view class="pre_header">
+    <view class="pre_test_box">
+      <view class="title">孕检重点</view>
+      <view class="header_content">
+        <view class="project_text">{{detail.project}}</view>
+        <view>孕检日期：{{detail.preDate}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="pre_container">
+    {{detail.content}}
+  </view>
+
+
+</view>

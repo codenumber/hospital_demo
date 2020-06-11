@@ -1,0 +1,6 @@
+<view class="upload_item">
+  <view class="img_box">
+    <image class="img" mode="heightFix"  src="{{src}}"></image>
+  </view>
+  <view class="del_btn" data-index="{{index}}" bindtap="delImg">×</view>
+</view>

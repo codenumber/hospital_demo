@@ -1,0 +1,65 @@
+.bg_view {
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.1);
+  z-index: 100;
+}
+.auth_modal {
+  background: #fff;
+  width: 60vw;
+  height: 30vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  flex-direction: column;
+  border-radius: 30rpx;
+  z-index: 200;
+}
+.auth_header {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth_content {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.auth_content  .img {
+  border: 2rpx solid #d4247b;
+  width: 30%;
+}
+
+.auth_footer {
+  flex: 1;
+  display: flex;
+}
+.cancle,.confirm {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cancle .cancle_btn,.confirm .confirm_btn {
+  font-size: 30rpx;
+  border-radius: 50rpx;
+  border: 2rpx solid #ccc;
+  margin-bottom: 15rpx;
+}
+.confirm .confirm_btn {
+  background-color: #06c161;
+  color: #fff;
+}
+.cancle .cancle_btn {
+  color: #06c161;
+  background: #fff;
+}

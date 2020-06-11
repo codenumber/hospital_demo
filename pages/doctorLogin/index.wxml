@@ -1,0 +1,11 @@
+<view class="doctor_pg">
+  <view class="login_box">
+    <view class="login_header">
+      <image mode="widthFix"></image>
+    </view>
+    <form>
+      <label for=""></label> 
+    </form>
+  </view>
+</view>
+

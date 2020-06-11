@@ -1,0 +1,45 @@
+<view class="video_pg">
+
+  <!-- 头部视频盒子 -->
+  <view class="video_box">
+    <video class="video" src="{{video.src}}" bindplay="addInterval" bindpause="pauseInterval" controls auto-pause-if-navigate></video>
+    <view class="video_title_box">
+      <view class="title">{{video.title}}</view>
+      <view class="pre"></view>
+    </view>
+    <view class="video_bottom">
+      <button open-type="share" class="share_box">
+        <image class="integral_img" mode="widthFix" src="../../icons/integral-fill.png"></image>
+        <view class="share_text">分享视频领取积分</view>
+      </button>
+     
+      <view class="tool_box">
+        <view class="comment_num">
+                <view class="iconfont icon-xiaoxi"></view>
+                <view class="comment_text">{{video.comment_num}}</view>
+        </view>
+        <view class="create_time">
+            <view class="iconfont icon-jilu"></view>
+            <view class="time_text">{{video.create_time}}</view>
+         </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="container">
+    <!-- 推荐视频盒子 -->
+    <view class="recommend_box">
+      <view class="recommend_title">精选视频推荐</view>
+      <scroll-view class="recommend" scroll-x >
+        <navigator url="../video/index?id={{item.id}}" class="recommend_item" wx:for="{{videoList}}" wx:key="id">
+          <view class="item_picture">
+            <image mode="widthFix" class="item_image" src="{{item.pic_url}}"></image>
+          </view>
+          <view class="item_title">{{item.title}}</view>
+        </navigator>
+      </scroll-view>
+    </view>
+    
+  </view>
+  
+</view>

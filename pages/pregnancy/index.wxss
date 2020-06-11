@@ -1,0 +1,117 @@
+page {
+  background-color: #feebed;
+  padding-bottom: 50rpx;
+}
+.pre_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 220rpx;
+  background-color: #fff;
+  padding: 15rpx 0 15rpx 0;
+}
+.pre_cal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pre_cal  .picker_container {
+  width: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.pre_cal .picker_container .iconfont {
+  font-size: 120rpx;
+  color: #d5496a;
+  width: 100rpx;
+}
+
+.cal_box .cal_text {
+  color: #d5496a;
+  font-size: 30rpx;
+}
+.day_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+.day_box .day_top {
+  display: flex;
+  font-size: 30rpx;
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 15rpx;
+}
+.day_top .day_text {
+  display: flex;
+}
+.day_text .user_pickerbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15rpx 0 15rpx;
+}
+.day_text .user_pickerbox  .iconfont {
+  font-size: 40rpx;
+}
+.day_content {
+  display: flex;
+  justify-content: space-between;
+}
+.day_content .surplus_day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60rpx;
+}
+.day_content .day {
+  margin-left: 30rpx;
+}
+.right_tool {
+  font-size: 25rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.short_message ,.wechart_message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ .switch {
+  transform: scale(0.5);
+  width: 80rpx;
+  height: 50rpx;
+}
+.pre_container {
+  padding: 0 15rpx 0 20rpx;
+}
+.pre_item {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 180rpx;
+  margin-top: 15rpx;
+  padding: 0 15rpx 15rpx 15rpx;
+}
+.pre_item .pre_title {
+  flex: 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 35rpx;
+  font-weight: bold;
+}
+.pre_item .pre_content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 20rpx;
+}
+.pre_content .pre_time {
+  display: flex;
+}

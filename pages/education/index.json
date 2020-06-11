@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "MessageItem": "../../components/MessageItem/MessageItem"
+  },
+  "navigationBarTitleText": "医生项目-孕妇端"
+}

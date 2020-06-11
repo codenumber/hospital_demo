@@ -1,0 +1,33 @@
+page {
+  background-color: #feebed
+}
+.pre_header {
+  height: 200rpx;
+  padding: 15rpx 0;
+}
+.pre_test_box {
+  background-color: #fff;
+  height: 100%;
+}
+.pre_test_box .title {
+  font-size: 40rpx;
+  font-weight: bold;
+  height: 30%;
+  padding-left: 15rpx;
+}
+.pre_test_box .header_content {
+  font-size: 25rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 30rpx;
+  height: 70%;
+}
+.pre_container {
+  height: 80vh;
+  width: 100%;
+  background-color: #fff;
+}
+.header_content .project_text {
+  color: grey;
+}
